@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2196F3;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin: 10px;
+      flex: 1 1 30%;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* ----- Responsive Styles ----- */
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Design Demo</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container" id="cardContainer">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+  </div>
+
+  <footer>
+    &copy; 2025 Responsive Design
+  </footer>
+
+  <script>
+    // Example JS: Dynamically add a card
+    function addCard() {
+      const container = document.getElementById('cardContainer');
+      const newCard = document.createElement('div');
+      newCard.className = 'card';
+      newCard.textContent = 'New Card';
+      container.appendChild(newCard);
+    }
+
+    // Adding a new card after 3 seconds
+    setTimeout(addCard, 3000);
+  </script>
+
+</body>
+</html>
