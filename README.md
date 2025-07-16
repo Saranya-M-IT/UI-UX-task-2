@@ -13,4 +13,5 @@ Flexible grids and layouts using relative units like %, vw, vh
 Responsive images with max-width: 100%
 Viewport meta tag to control layout on mobile browsers
 OUTPUT:
+(https://github.com/user-attachments/assets/4b043fe5-2762-4edd-880c-0d2ea8040cb0)
 
